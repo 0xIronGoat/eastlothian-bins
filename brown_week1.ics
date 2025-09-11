@@ -1,214 +1,214 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//East Lothian Brown Bin//
-X-WR-CALNAME:East Lothian Brown Bin (Week 1)
+X-WR-CALNAME:Bin Collection: Garden Waste (Week 1)
 X-WR-TIMEZONE:Europe/London
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20250903
 DTEND;VALUE=DATE:20250904
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20250903-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20250917
 DTEND;VALUE=DATE:20250918
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20250917-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20251001
 DTEND;VALUE=DATE:20251002
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20251001-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20251015
 DTEND;VALUE=DATE:20251016
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20251015-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20251029
 DTEND;VALUE=DATE:20251030
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20251029-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20251112
 DTEND;VALUE=DATE:20251113
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20251112-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20251126
 DTEND;VALUE=DATE:20251127
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20251126-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20251210
 DTEND;VALUE=DATE:20251211
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20251210-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20251224
 DTEND;VALUE=DATE:20251225
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20251224-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260107
 DTEND;VALUE=DATE:20260108
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260107-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260121
 DTEND;VALUE=DATE:20260122
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260121-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260204
 DTEND;VALUE=DATE:20260205
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260204-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260218
 DTEND;VALUE=DATE:20260219
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260218-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260304
 DTEND;VALUE=DATE:20260305
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260304-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260318
 DTEND;VALUE=DATE:20260319
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260318-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260401-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260415
 DTEND;VALUE=DATE:20260416
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260415-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260429
 DTEND;VALUE=DATE:20260430
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260429-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260513
 DTEND;VALUE=DATE:20260514
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260513-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260527
 DTEND;VALUE=DATE:20260528
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260527-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260610
 DTEND;VALUE=DATE:20260611
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260610-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260624
 DTEND;VALUE=DATE:20260625
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260624-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260708
 DTEND;VALUE=DATE:20260709
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260708-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260723
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260722-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260806
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260805-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Garden Waste
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260820
-DTSTAMP:20250911T113655Z
+DTSTAMP:20250911T114028Z
 UID:20260819-brown@eastlothian-bins
-DESCRIPTION:Put out your brown bin for garden waste.
+DESCRIPTION:Set out your Garden Waste bin tonight for collection tomorrow.
 END:VEVENT
 END:VCALENDAR
