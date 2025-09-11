@@ -12,18 +12,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Setup Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
-      - name: Install deps
+      - name: Install Python deps
         run: |
           pip install icalendar pyyaml python-dateutil
-
-      - name: Install UKBinCollectionData
-        run: |
+          # install the scraper package (brings its dependencies)
           pip install git+https://github.com/robbrad/UKBinCollectionData.git
+          # clone repo so we can call bin_to_ics.py directly
+          git clone https://github.com/robbrad/UKBinCollectionData
 
       - name: Build council feed (Green + Recycling)
         run: |
@@ -42,7 +42,6 @@ jobs:
           from dateutil.rrule import rrule, WEEKLY
           import yaml
           from icalendar import Calendar, Event
-          import pytz
 
           # ---- load config
           with open("config/brown.yaml", "r") as f:
@@ -52,36 +51,28 @@ jobs:
           season_end   = datetime.fromisoformat(cfg["season_end"])
           week1_anchor = datetime.fromisoformat(cfg["week1_anchor_monday"])  # must be Monday
 
-          # Map weekday name -> Python weekday number (Mon=0..Sun=6)
           wd_map = dict(MONDAY=0,TUESDAY=1,WEDNESDAY=2,THURSDAY=3,FRIDAY=4,SATURDAY=5,SUNDAY=6)
           coll_wd = wd_map[wd_name]
 
-          # Helper to build an ICS for a given week parity (1 or 2)
           def build_ics(parity):
             cal = Calendar()
             cal.add('prodid', '-//East Lothian Brown Bin//')
             cal.add('version', '2.0')
 
-            # Find the first Monday on/after season_start
             first_monday = season_start + timedelta(days=(0 - season_start.weekday()) % 7)
 
-            # Walk Mondays in the season; parity=1 means same parity as week1_anchor, parity=2 means opposite
             for dt_monday in rrule(freq=WEEKLY, dtstart=first_monday, until=season_end, byweekday=0):
               weeks_since_anchor = int((dt_monday - week1_anchor).days / 7)
-              # same parity if weeks_since_anchor is even (0,2,4,...) for Week1
               is_week1 = (weeks_since_anchor % 2 == 0)
               if (parity == 1 and not is_week1) or (parity == 2 and is_week1):
                 continue
-              # compute the collection date in that week (e.g., Wednesday)
-              dt_coll = dt_monday + timedelta(days=(coll_wd - 0))  # Monday + offset
+              dt_coll = dt_monday + timedelta(days=(coll_wd - 0))
               if dt_coll < season_start or dt_coll > season_end:
                 continue
-              # Create all-day event titled exactly for Homey filtering
-              ev = Event()
+              ev = Calendar.event_class()
               ev.add('summary', 'Brown Bin (garden waste)')
-              ev.add('dtstart', dt_coll.date())  # all-day
+              ev.add('dtstart', dt_coll.date())
               ev.add('dtend', (dt_coll + timedelta(days=1)).date())
-              # add a couple of reminders
               ev.add('description', 'Put out your brown bin for garden waste.')
               cal.add_component(ev)
             return cal.to_ical().decode('utf-8')
