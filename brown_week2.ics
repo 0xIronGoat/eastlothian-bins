@@ -1,6 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//East Lothian Brown Bin//
+X-WR-CALNAME:East Lothian Brown Bin (Week 1)
+X-WR-TIMEZONE:Europe/London
 BEGIN:VEVENT
 SUMMARY:Brown Bin (garden waste)
 DTSTART;VALUE=DATE:20250910

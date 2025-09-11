@@ -1,13 +1,13 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//UK Bin Collection Data//bin_to_ics.py//EN
-NAME:East Lothian Bins (EH32 0RW)
-X-WR-CALNAME:East Lothian Bins (EH32 0RW)
+NAME:East Lothian Bins
+X-WR-CALNAME:East Lothian Bins
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Food Waste & Recycling
 DTSTART;VALUE=DATE:20250917
 DTEND;VALUE=DATE:20250918
-UID:bin-collection-2025-09-17-2245@ukbincollection
+UID:bin-collection-2025-09-17-6081@ukbincollection
 DESCRIPTION:Collection for: Food Waste & Recycling
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -29,7 +29,7 @@ BEGIN:VEVENT
 SUMMARY:Bin Collection: Non Recyclable Waste
 DTSTART;VALUE=DATE:20250918
 DTEND;VALUE=DATE:20250919
-UID:bin-collection-2025-09-18-8620@ukbincollection
+UID:bin-collection-2025-09-18-3284@ukbincollection
 DESCRIPTION:Collection for: Non Recyclable Waste
 BEGIN:VALARM
 ACTION:DISPLAY
