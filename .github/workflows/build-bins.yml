@@ -85,8 +85,8 @@ jobs:
 
       - name: Commit updated ICS files
         run: |
-          git config user.name "actions"
-          git config user.email "actions@users.noreply.github.com"
-          git add bins.ics brown_week1.ics brown_week2.ics
-          git commit -m "Update bin calendars" || echo "No changes"
-          git push
+      git config user.name "github-actions[bot]"
+      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      git add bins.ics brown_week1.ics brown_week2.ics
+      git commit -m "Update bin calendars" || echo "No changes"
+      git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/0xIronGoat/eastlothian-bins.git HEAD:main
