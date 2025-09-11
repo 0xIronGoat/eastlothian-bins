@@ -7,7 +7,7 @@ BEGIN:VEVENT
 SUMMARY:Bin Collection: Food Waste & Recycling
 DTSTART;VALUE=DATE:20250917
 DTEND;VALUE=DATE:20250918
-UID:bin-collection-2025-09-17-9022@ukbincollection
+UID:bin-collection-2025-09-17-5804@ukbincollection
 DESCRIPTION:Collection for: Food Waste & Recycling
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -29,7 +29,7 @@ BEGIN:VEVENT
 SUMMARY:Bin Collection: Non Recyclable Waste
 DTSTART;VALUE=DATE:20250918
 DTEND;VALUE=DATE:20250919
-UID:bin-collection-2025-09-18-8683@ukbincollection
+UID:bin-collection-2025-09-18-7003@ukbincollection
 DESCRIPTION:Collection for: Non Recyclable Waste
 BEGIN:VALARM
 ACTION:DISPLAY
