@@ -21,10 +21,9 @@ jobs:
         run: |
           pip install icalendar pyyaml python-dateutil
 
-      - name: Fetch UKBinCollectionData
+      - name: Install UKBinCollectionData
         run: |
-          git clone https://github.com/robbrad/UKBinCollectionData
-          pip install -r UKBinCollectionData/requirements.txt
+          pip install git+https://github.com/robbrad/UKBinCollectionData.git
 
       - name: Build council feed (Green + Recycling)
         run: |
