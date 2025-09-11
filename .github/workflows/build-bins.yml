@@ -47,9 +47,9 @@ jobs:
           with open("config/brown.yaml", "r") as f:
             cfg = yaml.safe_load(f)
           wd_name = cfg["collection_weekday"].upper()
-          season_start = datetime.fromisoformat(cfg["season_start"])
-          season_end   = datetime.fromisoformat(cfg["season_end"])
-          week1_anchor = datetime.fromisoformat(cfg["week1_anchor_monday"])  # must be Monday
+          season_start = datetime.fromisoformat(str(cfg["season_start"]))
+          season_end   = datetime.fromisoformat(str(cfg["season_end"]))
+          week1_anchor = datetime.fromisoformat(str(cfg["week1_anchor_monday"]))  # must be Monday
 
           wd_map = dict(MONDAY=0,TUESDAY=1,WEDNESDAY=2,THURSDAY=3,FRIDAY=4,SATURDAY=5,SUNDAY=6)
           coll_wd = wd_map[wd_name]
