@@ -29,12 +29,15 @@ jobs:
           git clone https://github.com/robbrad/UKBinCollectionData
 
       - name: Build council feed (Green + Recycling)
+        env:
+          POSTCODE: ${{ secrets.POSTCODE }}
+          DOOR_NUMBER: ${{ secrets.DOOR_NUMBER }}
         run: |
           python UKBinCollectionData/uk_bin_collection/uk_bin_collection/collect_data.py EastLothianCouncil \
             "https://eastlothian.gov.uk" \
-            -s -p "EH32 0RW" -n "4" \
+            -s -p "$POSTCODE" -n "$DOOR_NUMBER" \
           | python UKBinCollectionData/bin_to_ics.py \
-              --name "East Lothian Bins (EH32 0RW)" \
+              --name "East Lothian Bins" \
               --output bins.ics \
               --alarms "1d,12h,1h"
 
@@ -61,7 +64,7 @@ jobs:
             cal = Calendar()
             cal.add('prodid', '-//East Lothian Brown Bin//')
             cal.add('version', '2.0')
-            cal.add('X-WR-CALNAME', 'East Lothian Brown Bin (EH32 0RW, Week 1)')
+            cal.add('X-WR-CALNAME', 'East Lothian Brown Bin (Week 1)')
             cal.add('X-WR-TIMEZONE', 'Europe/London')
 
             first_monday = season_start + timedelta(days=(0 - season_start.weekday()) % 7)
