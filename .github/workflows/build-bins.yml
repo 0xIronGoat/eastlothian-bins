@@ -79,7 +79,7 @@ jobs:
                 continue
 
               ev = Event()
-              ev.add('summary', 'Brown Bin (garden waste)')
+              ev.add('summary', 'Bin Collection: Garden Waste')
               # Add UID/DTSTAMP so Apple treats it as a proper subscription
               ev.add('uid', f"{dt_coll.strftime('%Y%m%d')}-brown@eastlothian-bins")
               ev.add('dtstamp', datetime.now(timezone.utc))
