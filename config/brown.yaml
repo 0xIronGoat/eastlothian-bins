@@ -1,0 +1,10 @@
+# Brown Bin (garden waste) generator config for EH32 0RW, Week 1
+# Collection weekday is Wednesday (per East Lothian’s published calendar)
+collection_weekday: WEDNESDAY
+
+# Define the garden waste season date range (per council PDF 2024/25)
+season_start: 2024-04-01
+season_end:   2025-03-31
+
+# Week 1 anchor Monday (first Week 1 block in the PDF)
+week1_anchor_monday: 2024-04-01

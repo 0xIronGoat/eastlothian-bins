@@ -1,0 +1,102 @@
+name: Build East Lothian bin calendars
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"    # Every Monday 06:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          pip install icalendar pyyaml python-dateutil
+
+      - name: Fetch UKBinCollectionData
+        run: |
+          git clone https://github.com/robbrad/UKBinCollectionData
+          pip install -r UKBinCollectionData/requirements.txt
+
+      - name: Build council feed (Green + Recycling)
+        run: |
+          python UKBinCollectionData/uk_bin_collection/uk_bin_collection/collect_data.py EastLothian \
+            "https://collectiondates.eastlothian.gov.uk/your-calendar" \
+            -p "EH32 0RW" -n "4" \
+          | python UKBinCollectionData/bin_to_ics.py \
+              --name "East Lothian Bins (EH32 0RW)" \
+              --output bins.ics \
+              --alarms "1d,12h,1h"
+
+      - name: Build Brown Bin Week1/Week2 ICS
+        run: |
+          python - << 'PY'
+          from datetime import datetime, timedelta
+          from dateutil.rrule import rrule, WEEKLY
+          import yaml
+          from icalendar import Calendar, Event
+          import pytz
+
+          # ---- load config
+          with open("config/brown.yaml", "r") as f:
+            cfg = yaml.safe_load(f)
+          wd_name = cfg["collection_weekday"].upper()
+          season_start = datetime.fromisoformat(cfg["season_start"])
+          season_end   = datetime.fromisoformat(cfg["season_end"])
+          week1_anchor = datetime.fromisoformat(cfg["week1_anchor_monday"])  # must be Monday
+
+          # Map weekday name -> Python weekday number (Mon=0..Sun=6)
+          wd_map = dict(MONDAY=0,TUESDAY=1,WEDNESDAY=2,THURSDAY=3,FRIDAY=4,SATURDAY=5,SUNDAY=6)
+          coll_wd = wd_map[wd_name]
+
+          # Helper to build an ICS for a given week parity (1 or 2)
+          def build_ics(parity):
+            cal = Calendar()
+            cal.add('prodid', '-//East Lothian Brown Bin//')
+            cal.add('version', '2.0')
+
+            # Find the first Monday on/after season_start
+            first_monday = season_start + timedelta(days=(0 - season_start.weekday()) % 7)
+
+            # Walk Mondays in the season; parity=1 means same parity as week1_anchor, parity=2 means opposite
+            for dt_monday in rrule(freq=WEEKLY, dtstart=first_monday, until=season_end, byweekday=0):
+              weeks_since_anchor = int((dt_monday - week1_anchor).days / 7)
+              # same parity if weeks_since_anchor is even (0,2,4,...) for Week1
+              is_week1 = (weeks_since_anchor % 2 == 0)
+              if (parity == 1 and not is_week1) or (parity == 2 and is_week1):
+                continue
+              # compute the collection date in that week (e.g., Wednesday)
+              dt_coll = dt_monday + timedelta(days=(coll_wd - 0))  # Monday + offset
+              if dt_coll < season_start or dt_coll > season_end:
+                continue
+              # Create all-day event titled exactly for Homey filtering
+              ev = Event()
+              ev.add('summary', 'Brown Bin (garden waste)')
+              ev.add('dtstart', dt_coll.date())  # all-day
+              ev.add('dtend', (dt_coll + timedelta(days=1)).date())
+              # add a couple of reminders
+              ev.add('description', 'Put out your brown bin for garden waste.')
+              cal.add_component(ev)
+            return cal.to_ical().decode('utf-8')
+
+          with open("brown_week1.ics", "w") as f:
+            f.write(build_ics(parity=1))
+          with open("brown_week2.ics", "w") as f:
+            f.write(build_ics(parity=2))
+          PY
+
+      - name: Commit updated ICS files
+        run: |
+          git config user.name "actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add bins.ics brown_week1.ics brown_week2.ics
+          git commit -m "Update bin calendars" || echo "No changes"
+          git push
