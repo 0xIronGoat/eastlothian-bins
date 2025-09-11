@@ -37,7 +37,7 @@ jobs:
             "https://eastlothian.gov.uk" \
             -s -p "$POSTCODE" -n "$DOOR_NUMBER" \
           | python UKBinCollectionData/bin_to_ics.py \
-              --name "East Lothian Bins" \
+              --name "Bin Collections (Council feed)" \
               --output bins.ics \
               --alarms "1d,12h,1h"
 
@@ -64,7 +64,8 @@ jobs:
             cal = Calendar()
             cal.add('prodid', '-//East Lothian Brown Bin//')
             cal.add('version', '2.0')
-            cal.add('X-WR-CALNAME', 'East Lothian Brown Bin (Week 1)')
+            # Sidebar calendar name in Apple Calendar
+            cal.add('X-WR-CALNAME', 'Bin Collection: Garden Waste (Week 1)')
             cal.add('X-WR-TIMEZONE', 'Europe/London')
 
             first_monday = season_start + timedelta(days=(0 - season_start.weekday()) % 7)
@@ -79,13 +80,15 @@ jobs:
                 continue
 
               ev = Event()
+              # Event title and description to match your style
               ev.add('summary', 'Bin Collection: Garden Waste')
-              # Add UID/DTSTAMP so Apple treats it as a proper subscription
+              ev.add('description', 'Set out your Garden Waste bin tonight for collection tomorrow.')
+              # UID/DTSTAMP help iCloud treat it as a proper subscription
               ev.add('uid', f"{dt_coll.strftime('%Y%m%d')}-brown@eastlothian-bins")
               ev.add('dtstamp', datetime.now(timezone.utc))
-              ev.add('dtstart', dt_coll.date())                     # all-day
-              ev.add('dtend', (dt_coll + timedelta(days=1)).date()) # all-day end
-              ev.add('description', 'Put out your brown bin for garden waste.')
+              # All-day event
+              ev.add('dtstart', dt_coll.date())
+              ev.add('dtend', (dt_coll + timedelta(days=1)).date())
               cal.add_component(ev)
             return cal.to_ical().decode('utf-8')
 
