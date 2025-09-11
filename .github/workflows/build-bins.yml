@@ -61,6 +61,8 @@ jobs:
             cal = Calendar()
             cal.add('prodid', '-//East Lothian Brown Bin//')
             cal.add('version', '2.0')
+            cal.add('X-WR-CALNAME', 'East Lothian Brown Bin (EH32 0RW, Week 1)')
+            cal.add('X-WR-TIMEZONE', 'Europe/London')
 
             first_monday = season_start + timedelta(days=(0 - season_start.weekday()) % 7)
 
