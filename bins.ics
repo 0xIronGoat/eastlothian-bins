@@ -5,9 +5,9 @@ NAME:Bin Collections (Council feed)
 X-WR-CALNAME:Bin Collections (Council feed)
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Food Waste & Recycling
-DTSTART;VALUE=DATE:20250917
-DTEND;VALUE=DATE:20250918
-UID:bin-collection-2025-09-17-8035@ukbincollection
+DTSTART;VALUE=DATE:20250924
+DTEND;VALUE=DATE:20250925
+UID:bin-collection-2025-09-24-7622@ukbincollection
 DESCRIPTION:Collection for: Food Waste & Recycling
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -27,9 +27,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Bin Collection: Non Recyclable Waste
-DTSTART;VALUE=DATE:20250918
-DTEND;VALUE=DATE:20250919
-UID:bin-collection-2025-09-18-8812@ukbincollection
+DTSTART;VALUE=DATE:20251009
+DTEND;VALUE=DATE:20251010
+UID:bin-collection-2025-10-09-2488@ukbincollection
 DESCRIPTION:Collection for: Non Recyclable Waste
 BEGIN:VALARM
 ACTION:DISPLAY
